@@ -76,9 +76,7 @@ class kMedoids(object):
     
     def _updateMembership(self,centroids):
         self.labels = np.argmin(self.D_matrix[:,centroids],axis=1)
-        #print("test",self.labels)
         u = self._labels_to_membership()
-        #print("test1",u)
         return u
     
     def objective_value(self):
